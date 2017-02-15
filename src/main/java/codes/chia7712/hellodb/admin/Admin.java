@@ -1,12 +1,13 @@
 package codes.chia7712.hellodb.admin;
 
 import codes.chia7712.hellodb.Table;
+import java.io.Closeable;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.util.List;
 import java.util.Properties;
 
-public interface Admin {
+public interface Admin extends Closeable {
   public static final String ADMIN_IMPL = "admin.impl";
   public static final String DEFAULT_ADMIN_IMPL = SimpleAdmin.class.getName();
   public static Admin create(Properties properties) throws Exception {

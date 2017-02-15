@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.util.Comparator;
 
-public final class ByteUtil {
+public final class BytesUtil {
   private static final Comparator<Cell> CELL_COMPARATOR = new CellComparator();
   private static final String UTF8_ENCODING = "UTF-8";
   private static final Charset UTF8_CHARSET = Charset.forName(UTF8_ENCODING);
@@ -47,6 +47,6 @@ public final class ByteUtil {
             .array();
   }
 
-  private ByteUtil() {
+  private BytesUtil() {
   }
 }

@@ -56,6 +56,11 @@ class SimpleAdmin implements Admin {
     return tables.keySet().stream().collect(Collectors.toList());
   }
 
+  @Override
+  public void close() throws IOException {
+    //nothing
+  }
+
   private static class SimpleTable implements Table {
 
     private static final CellComparator CELL_COMPARATOR = new CellComparator();

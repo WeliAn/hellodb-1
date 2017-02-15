@@ -27,7 +27,8 @@ public class TestAdmin {
   }
 
   @AfterClass
-  public static void tearDownClass() {
+  public static void tearDownClass() throws IOException {
+    ADMIN.close();
   }
 
   @Before
